@@ -18,12 +18,12 @@ namespace FurnitureShop.Core.Services.DataAccess
         public DbContext Self => this;
         public DbSet<ConsumedMessage> ConsumedMessages => Set<ConsumedMessage>();
         public DbSet<RaisedEvent> RaisedEvents => Set<RaisedEvent>();
-        public DbSet<User> Orders => Set<User>();
-        public DbSet<User> Products => Set<User>();
-        public DbSet<User> Reviews => Set<User>();
-        public DbSet<User> Complaints => Set<User>();
-        public DbSet<User> Categories => Set<User>();
-        public DbSet<User> Addresses => Set<User>();
+        public DbSet<Review> Orders => Set<Review>();
+        public DbSet<Product> Products => Set<Product>();
+        public DbSet<Order> Reviews => Set<Order>();
+        public DbSet<Complaint> Complaints => Set<Complaint>();
+        public DbSet<Address> Categories => Set<Address>();
+        public DbSet<Category> Addresses => Set<Category>();
         public CoreDbContext(DbContextOptions<CoreDbContext> options)
             : base(options)
         { }
