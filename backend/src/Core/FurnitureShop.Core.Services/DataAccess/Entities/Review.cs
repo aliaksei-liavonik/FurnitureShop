@@ -5,10 +5,10 @@ namespace FurnitureShop.Core.Services.DataAccess.Entities
 {
     public class Review
     {
-        public Review(string Text,double Rating)
+        public Review(string text,double rating)
         {
-            this.Text = Text;
-            this.Rating = Rating;
+            this.Text = text;
+            this.Rating = rating;
             this.CreatedDate = DateTime.Now;
         }
         public Guid Id {get;set;}

@@ -18,12 +18,12 @@ namespace FurnitureShop.Core.Services.DataAccess
         public DbContext Self => this;
         public DbSet<ConsumedMessage> ConsumedMessages => Set<ConsumedMessage>();
         public DbSet<RaisedEvent> RaisedEvents => Set<RaisedEvent>();
-        public DbSet<Review> Orders => Set<Review>();
+        public DbSet<Review> Reviews => Set<Review>();
         public DbSet<Product> Products => Set<Product>();
-        public DbSet<Order> Reviews => Set<Order>();
+        public DbSet<Order> Orders => Set<Order>();
         public DbSet<Complaint> Complaints => Set<Complaint>();
-        public DbSet<Address> Categories => Set<Address>();
-        public DbSet<Category> Addresses => Set<Category>();
+        public DbSet<Address> Addresses => Set<Address>();
+        public DbSet<Category> Categories => Set<Category>();
         public CoreDbContext(DbContextOptions<CoreDbContext> options)
             : base(options)
         { }
@@ -32,10 +32,14 @@ namespace FurnitureShop.Core.Services.DataAccess
         {
             base.OnModelCreating(builder);
             builder.HasDefaultSchema("dbo");
-
             ConsumedMessage.Configure(builder);
             RaisedEvent.Configure(builder);
-
+            builder.ApplyConfiguration<Order>(new DbConfiguration());
+            builder.ApplyConfiguration<Product>(new DbConfiguration());
+            builder.ApplyConfiguration<Review>(new DbConfiguration());
+            builder.ApplyConfiguration<Complaint>(new DbConfiguration());
+            builder.ApplyConfiguration<Category>(new DbConfiguration());
+            builder.ApplyConfiguration<Address>(new DbConfiguration());
             ConfigureAuth(builder);
         }
 

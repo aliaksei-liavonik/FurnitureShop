@@ -5,13 +5,13 @@ namespace FurnitureShop.Core.Services.DataAccess.Entities
 {
     public class Product
     {
-        public Product(string Name,decimal Price,string Desc,string PictureURL, Category Ctg)
+        public Product(string name,decimal price,string desc,string pictureURL, Category ctg)
         {
-            this.Name = Name;
-            this.Price = Price;
-            this.Description = Desc;
-            this.PictureURL = PictureURL;
-            this.Category = Ctg;
+            this.Name = name;
+            this.Price = price;
+            this.Description = desc;
+            this.PictureURL = pictureURL;
+            this.Category = ctg;
         }
         public Guid Id { get; set; }
         public string Name { get; set; }

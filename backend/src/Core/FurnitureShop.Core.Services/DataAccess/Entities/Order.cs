@@ -5,13 +5,14 @@ namespace FurnitureShop.Core.Services.DataAccess.Entities
 {
     public class Order
     {
-        public Order(AuthUser User,decimal Price,OrderState State,DateTime OrderStartedDate, Address DeliveryAddress)
+        public Order(AuthUser user,decimal price,OrderState state,DateTime orderStartedDate, Address deliveryAddress, List<Product> products)
         {
-            this.User = User;
-            this.Price = Price;
-            this.State = State;
-            this.OrderStartedDate = OrderStartedDate;
-            this.DeliveryAddress = DeliveryAddress;
+            this.User = user;
+            this.Price = price;
+            this.State = state;
+            this.OrderStartedDate = orderStartedDate;
+            this.DeliveryAddress = deliveryAddress;
+            this.Products = products;
         }
         public Guid Id {get;set;}
         public AuthUser User {get;set;}
@@ -21,6 +22,7 @@ namespace FurnitureShop.Core.Services.DataAccess.Entities
         public DateTime OrderStartedDate {get;set;}
         public DateTime? OrderedFinishedDate {get;set;}
         public Address DeliveryAddress {get;set;}
+        public List<Product> Products {get;set;}
     }
     public enum OrderState
     {

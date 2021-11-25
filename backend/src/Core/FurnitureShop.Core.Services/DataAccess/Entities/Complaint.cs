@@ -5,9 +5,9 @@ namespace FurnitureShop.Core.Services.DataAccess.Entities
 {
     public class Complaint
     {
-        public Complaint(string Text,double Rating)
+        public Complaint(string text)
         {
-            this.Text = Text;
+            this.Text = text;
             this.State = ReviewState.pending;
             this.CreatedDate = DateTime.Now;
         }
