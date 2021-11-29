@@ -1,10 +1,10 @@
 using LeanCode.CQRS;
 using LeanCode.CQRS.Security;
 
-namespace FurnitureShop.Core.Contracts.Complaint
+namespace FurnitureShop.Core.Contracts.Product
 {
     [AllowUnauthorized]
-    public class CreateComplaint : IRemoteCommand
+    public class DeleteProduct : IRemoteCommand
     {
         public string Arg { get; set; }
 
