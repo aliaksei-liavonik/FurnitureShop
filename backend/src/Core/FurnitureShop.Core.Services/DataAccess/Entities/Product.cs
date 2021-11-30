@@ -5,7 +5,7 @@ namespace FurnitureShop.Core.Services.DataAccess.Entities
 {
     public class Product
     {
-        public Product(string name,decimal price,string desc,string pictureURL, Category ctg)
+        public Product(string name, decimal price, string desc, string pictureURL, Category ctg)
         {
             this.Name = name;
             this.Price = price;
@@ -13,6 +13,7 @@ namespace FurnitureShop.Core.Services.DataAccess.Entities
             this.PictureURL = pictureURL;
             this.Category = ctg;
         }
+
         public Guid Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
