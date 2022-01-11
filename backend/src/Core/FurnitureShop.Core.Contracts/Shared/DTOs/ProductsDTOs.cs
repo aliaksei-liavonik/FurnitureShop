@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FurnitureShop.Core.Contracts.Mobile.Products
+namespace FurnitureShop.Core.Contracts.Shared.DTOs.Products
 {
     public class ProductDetailsDTO
     {
@@ -12,7 +12,7 @@ namespace FurnitureShop.Core.Contracts.Mobile.Products
     public class ProductInfoDTO
     {
         public string Name { get; set; }
-        public decimal Price { get; set; }
+        public int Price { get; set; }
         public double? AverageRating { get; set; }
         public string? PreviewPhotoURL { get;set; }
         public Guid? CategoryId { get; set; }

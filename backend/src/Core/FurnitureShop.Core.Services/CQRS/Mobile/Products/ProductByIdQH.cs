@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FurnitureShop.Core.Contracts.Mobile.Products;
+using FurnitureShop.Core.Contracts.Shared.DTOs.Products;
 using FurnitureShop.Core.Domain;
 using FurnitureShop.Core.Services.DataAccess;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +30,7 @@ namespace FurnitureShop.Core.Services.CQRS.Mobile.Products
                         ProductInfo = new ProductInfoDTO
                         {
                             Name = p.Name,
-                            Price = p.Price,
+                            Price = Decimal.ToInt32(p.Price),
                             CategoryId = p.CategoryId,
                             PreviewPhotoURL = p.PreviewPhotoUrl,
                             AverageRating = p.Reviews.Average(r => r.Rating),

@@ -3,6 +3,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using FurnitureShop.Core.Contracts;
 using FurnitureShop.Core.Contracts.Mobile.Products;
+using FurnitureShop.Core.Contracts.Shared.DTOs.Products;
+using FurnitureShop.Core.Contracts.Web.Products;
 using FurnitureShop.Core.Domain;
 using FurnitureShop.Core.Services.CQRS;
 using FurnitureShop.Core.Services.CQRS.Mobile.Products;
@@ -86,7 +88,7 @@ namespace FurnitureShop.Core.Services.Tests.CQRS.Mobile
                     ProductInfo = new ProductInfoDTO
                     {
                         Name = NewProductName,
-                        Price = NewProductPrice,
+                        Price = Decimal.ToInt32(NewProductPrice),
                     }
                 }
             };
@@ -132,7 +134,7 @@ namespace FurnitureShop.Core.Services.Tests.CQRS.Mobile
                     ProductInfo = new ProductInfoDTO
                     {
                         Name = NewProductName,
-                        Price = NewProductPrice,
+                        Price = Decimal.ToInt32(NewProductPrice),
                     }
                 }
             };

@@ -1,8 +1,9 @@
 using System;
+using FurnitureShop.Core.Contracts.Shared.DTOs.Products;
 using LeanCode.CQRS;
 using LeanCode.CQRS.Security;
 
-namespace FurnitureShop.Core.Contracts.Mobile.Products
+namespace FurnitureShop.Core.Contracts.Web.Products
 {
     [AuthorizeWhenHasAnyOf(Auth.Roles.Admin)]
     public class CreateProduct : IRemoteCommand

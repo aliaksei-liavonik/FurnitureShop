@@ -28,7 +28,7 @@ namespace FurnitureShop.Core.Services.CQRS.Mobile.Orders
                     Id = p.Id,
                     OrderInfo = new OrderInfoDTO
                     {
-                        Price = p.Price,
+                        Price = Decimal.ToInt32(p.Price),
                         UserId = p.UserId,
                         State = p.State,
                         Country = p.Country,
